@@ -12,6 +12,13 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 <details open>
   <summary>Click to Contract/Expend</summary>
 
+### 7. Handling Loading and Error States
+
+- `isFetching`
+  - the async query function hasn't yet resolved
+- `isLoading` (subset of isFetching)
+  - no cached data, plus `isFetching`
+
 </details>
 
 > Use react-query v3 for the first project \
