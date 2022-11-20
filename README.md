@@ -52,11 +52,21 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
   - shows while re-fetching
     - as long as cache hasn't expired!
 - Prefetching can be used for any anticipated data needs
-
   - not just pagination!
 
-- [Doc: React query - Prefetch](https://tanstack.com/query/v4/docs/guides/prefetching)
-- [Doc: React query v3 - Prefetch](https://react-query-v3.tanstack.com/guides/prefetching)
+[Doc: React query - Prefetch](https://tanstack.com/query/v4/docs/guides/prefetching)
+[Doc: React query v3 - Prefetch](https://react-query-v3.tanstack.com/guides/prefetching)
+
+### 16. Intro to Mutations
+
+- Similar to useQuery, but:
+  - return _mutate_ function
+  - doesn't need query key
+  - isLoading but no isFetching
+  - by default, re retries (configurable!)
+
+[Doc: React query - Mutations](https://tanstack.com/query/v4/docs/guides/mutations)
+[Doc: React query v3 - Mutations](https://react-query-v3.tanstack.com/guides/mutations)
 
 </details>
 
