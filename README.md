@@ -68,6 +68,16 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 [Doc: React query - Mutations](https://tanstack.com/query/v4/docs/guides/mutations)
 [Doc: React query v3 - Mutations](https://react-query-v3.tanstack.com/guides/mutations)
 
+### 19. Summary: React Query Basics
+
+- install package, create `QueryClient` and `QueryProvider`
+- `useQuery`, `isLoading`, `isFetching`
+- `staleTime`: for whether or not to re-fetch (on trigger)
+- `cacheTime`: for how long to hold on to data after inactivity
+- query key
+- pagination and pre-fetching
+- `useMutation`
+
 </details>
 
 > Use react-query v3 for the first project \
