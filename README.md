@@ -21,7 +21,8 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 
 ### 8. React Query Dev Tools
 
-[Doc: React query devtools](https://tanstack.com/query/v4/docs/devtools)
+- [Doc: React query - Devtools](https://tanstack.com/query/v4/docs/devtools)
+- [Doc: React query v3 - Devtools](https://react-query-v3.tanstack.com/devtools)
 
 ### 9. staleTime vs cacheTime
 
@@ -42,6 +43,20 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
     - how long it's been since the last active `useQuery`
   - after the cache expires, the data is garbage collected
 - Cache is backup data to display while fetching
+
+### 14. Pre-fetching Data
+
+- Prefetch
+  - adds data to cache
+  - automatically stale (configurable)
+  - shows while re-fetching
+    - as long as cache hasn't expired!
+- Prefetching can be used for any anticipated data needs
+
+  - not just pagination!
+
+- [Doc: React query - Prefetch](https://tanstack.com/query/v4/docs/guides/prefetching)
+- [Doc: React query v3 - Prefetch](https://react-query-v3.tanstack.com/guides/prefetching)
 
 </details>
 
