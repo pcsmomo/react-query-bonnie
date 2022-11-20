@@ -19,6 +19,10 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 - `isLoading` (subset of isFetching)
   - no cached data, plus `isFetching`
 
+### 8. React Query Dev Tools
+
+[Doc: React query devtools](https://tanstack.com/query/v4/docs/devtools)
+
 </details>
 
 > Use react-query v3 for the first project \
