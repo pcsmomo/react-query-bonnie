@@ -4,8 +4,10 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 
 ## Folder structure
 
-- 1
-- 2
+- 01-queries-loading-error
+  - blog-em-ipsum
+- 03-infinite-queries
+  - infinite-swapi
 
 ## Details
 
@@ -77,6 +79,14 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 - query key
 - pagination and pre-fetching
 - `useMutation`
+
+## Section 03. Infinite Queries for Loading Data "Just in Time"
+
+### 21. Code Quiz! Set up Infinite SWAPI for React Query
+
+```sh
+npm install --legacy-peer-deps
+```
 
 </details>
 
