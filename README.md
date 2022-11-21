@@ -107,6 +107,18 @@ npm install --save @tanstack/react-query-devtools
 > there's other libraries as well, \
 > but Bonnie think this library really works well with react-query infinite query
 
+## Section 04. React Query in Larger App: Setup, Centralization, Custom Hooks
+
+### 29. Intro to Lazy Days Spa App
+
+Create `.env` file and add `EXPRESS_SECRET`
+
+- centralizing fetching indicator / error handling
+- refetching data
+- integrating with auth
+- dependent queries
+- testing
+
 </details>
 
 > Use react-query v3 for the first project \
