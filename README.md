@@ -86,6 +86,8 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 
 ```sh
 npm install --legacy-peer-deps
+npm install --save @tanstack/react-query
+npm install --save @tanstack/react-query-devtools
 ```
 
 </details>
