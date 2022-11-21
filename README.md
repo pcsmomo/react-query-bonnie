@@ -133,6 +133,14 @@ If you want to ignore TypeScript?
 - `// @ts-nocheck` at the top of the problem file, or
 - `// @ts-ignore` above the problem line
 
+```sh
+npm install
+npm install --save @tanstack/react-query
+npm install --save @tanstack/react-query-devtools
+
+npx browserslist@latest --update-db
+```
+
 </details>
 
 > Use react-query v3 for the first project \
