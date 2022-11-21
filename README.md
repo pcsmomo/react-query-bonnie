@@ -8,6 +8,13 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
   - blog-em-ipsum: react-query v3
 - 03-infinite-queries
   - infinite-swapi: react-query v4
+- from 04-central-custom-hook
+  - lazy-spa
+    - large app
+    - server and client
+    - typescript
+    - jwt authentication
+    - react-query v4
 
 ## Details
 
@@ -118,6 +125,13 @@ Create `.env` file and add `EXPRESS_SECRET`
 - integrating with auth
 - dependent queries
 - testing
+
+### 31. Lazy Days Spa App Code Orientation
+
+If you want to ignore TypeScript?
+
+- `// @ts-nocheck` at the top of the problem file, or
+- `// @ts-ignore` above the problem line
 
 </details>
 
