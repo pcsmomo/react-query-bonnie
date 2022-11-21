@@ -5,9 +5,9 @@ React Query / TanStack Query: React Server State Management by Bonnie Schulkin
 ## Folder structure
 
 - 01-queries-loading-error
-  - blog-em-ipsum
+  - blog-em-ipsum: react-query v3
 - 03-infinite-queries
-  - infinite-swapi
+  - infinite-swapi: react-query v4
 
 ## Details
 
@@ -99,6 +99,13 @@ npm install --save @tanstack/react-query-devtools
 - Every query has its own element in the `pages` array
 - `pageParams` tracks the keys of queries that have been retrieved
   - rarely used, won't use here
+
+### 24. Write useInfiniteQuery Call
+
+[npm react-infinite-scroller](https://www.npmjs.com/package/react-infinite-scroller)
+
+> there's other libraries as well, \
+> but Bonnie think this library really works well with react-query infinite query
 
 </details>
 
