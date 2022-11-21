@@ -90,6 +90,16 @@ npm install --save @tanstack/react-query
 npm install --save @tanstack/react-query-devtools
 ```
 
+### 22. Intro to useInfiniteQuery
+
+- Shape of `data` different than `useQuery`
+- Object with two properties:
+  - pages
+  - pageParams
+- Every query has its own element in the `pages` array
+- `pageParams` tracks the keys of queries that have been retrieved
+  - rarely used, won't use here
+
 </details>
 
 > Use react-query v3 for the first project \
