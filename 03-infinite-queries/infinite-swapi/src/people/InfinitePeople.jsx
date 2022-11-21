@@ -11,7 +11,7 @@ const fetchUrl = async (url) => {
 
 export function InfinitePeople() {
   const { data, fetchNextPage, hasNextPage } = useInfiniteQuery(
-    "sw-people",
+    ["sw-people"],
     ({ pageParam = initialUrl }) => fetchUrl(pageParam),
     {
       getNextPageParam: (lastPage) => lastPage.next || undefined, // swapi will return `next` url and it is specified to this API
