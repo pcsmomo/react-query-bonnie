@@ -157,6 +157,27 @@ npx browserslist@latest --update-db
 > You will see 3 http requests on the network tab in the inspector
 > As default, react-query tries 3 times before gives up and to decide that is an error
 
+### 39. onError Default for Query Client
+
+https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts
+
+```js
+export interface DefaultOptions<TError = unknown> {
+  queries?: QueryObserverOptions<unknown, TError>
+  mutations?: MutationObserverOptions<unknown, TError, unknown, unknown>
+}
+```
+
+#### Alternative to `onError`: `Error Boundary`
+
+- Alternative: handle errors with React Error Boundary
+  - https://reactjs.org/docs/error-boundaries.html
+- `useErrorBoundary` for `useQuery`
+  - reference: https://tanstack.com/query/v4/docs/reference/useQuery
+- option to `useQuery` / `useMutation`
+  - or in `defaultOptions` when creating QueryClient
+- Set to true to propagate erros to the nearest error boudnary
+
 </details>
 
 > Use react-query v3 for the first project \
