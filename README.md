@@ -188,4 +188,15 @@ export interface DefaultOptions<TError = unknown> {
 > **Any other differences I should know about?** \
 > If you set the global error callback via `defaultOptions` (as presented in the lecture), **you can override the error callback in the `useQuery` options**. However, if you set the callback in the `queryCache` options (as presented in this article), and then set a different callback in the `useQuery` options, then both error callbacks will run on error (see this Q&A thread for a demonstration).
 
+## Section 05. Query Features I: Pre-Fetching and Pagination
+
+### 42. Adding Data to the Cache
+
+|                 | where to use?           | data from? | added to cache? |
+| --------------- | ----------------------- | ---------- | --------------- |
+| prefetchQuery   | method to `queryClient` | server     | yes             |
+| setQueryData    | method to `queryClient` | client     | yes             |
+| placeholderData | method to `useQuery`    | client     | no              |
+| initialData     | method to `useQuery`    | client     | yes             |
+
 </details>
