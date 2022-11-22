@@ -150,6 +150,13 @@ npx browserslist@latest --update-db
   - `useIsFetching` tells us this!
 - No need for `isFetching` on every custom hook / `useQuery` call
 
+### 37. onError Handler for useQuery
+
+[Chakra UI - Toast](https://chakra-ui.com/docs/components/toast)
+
+> You will see 3 http requests on the network tab in the inspector
+> As default, react-query tries 3 times before gives up and to decide that is an error
+
 </details>
 
 > Use react-query v3 for the first project \
