@@ -141,6 +141,15 @@ npm install --save @tanstack/react-query-devtools
 npx browserslist@latest --update-db
 ```
 
+### 36. Centralized Fetching indicator with useIsFetching
+
+- in smaller apps
+  - used `isFetching` from useQuery return object
+- in a larger app
+  - Loading spinner whenever any query `isFetching`
+  - `useIsFetching` tells us this!
+- No need for `isFetching` on every custom hook / `useQuery` call
+
 </details>
 
 > Use react-query v3 for the first project \
