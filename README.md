@@ -178,8 +178,14 @@ export interface DefaultOptions<TError = unknown> {
   - or in `defaultOptions` when creating QueryClient
 - Set to true to propagate erros to the nearest error boudnary
 
-</details>
+### 38. UPDATE: alternative way to specify global error handler
 
-> Use react-query v3 for the first project \
-> and then move on to v4 from the second project \
-> to see what has changed
+[TKDODO's blog about react-query-error-handling](https://tkdodo.eu/blog/react-query-error-handling#the-global-callbacks)
+
+> **Why is this way better?** \
+> Because the handler is tied to the query cache -- instead of the individual query -- the error handler is only triggered after all retries have failed. In the code presented in the course, the `toast.closeAll()` helps clean up any toasts triggered from previous retries. Using the `queryCache` option prevents toasts from retries, so `toast.closeAll()` (which is pretty inelegant) is not required.
+
+> **Any other differences I should know about?** \
+> If you set the global error callback via `defaultOptions` (as presented in the lecture), **you can override the error callback in the `useQuery` options**. However, if you set the callback in the `queryCache` options (as presented in this article), and then set a different callback in the `useQuery` options, then both error callbacks will run on error (see this Q&A thread for a demonstration).
+
+</details>
