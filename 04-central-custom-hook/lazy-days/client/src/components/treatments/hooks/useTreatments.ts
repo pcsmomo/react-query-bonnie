@@ -15,23 +15,27 @@ export function useTreatments(): Treatment[] {
   // const toast = useCustomToast();
 
   const fallback = [];
-  const { data = fallback } = useQuery(
-    [queryKeys.treatments],
-    getTreatments,
-    //   {
-    //   onError: (error) => {
-    //     const title =
-    //       error instanceof Error
-    //         ? error.message
-    //         : 'error connecting to the server';
-    //     toast({ title, status: 'error' });
-    //   },
-    // }
-  );
+  const { data = fallback } = useQuery([queryKeys.treatments], getTreatments, {
+    // onError: (error) => {
+    //   const title =
+    //     error instanceof Error
+    //       ? error.message
+    //       : 'error connecting to the server';
+    //   toast({ title, status: 'error' });
+    // },
+    staleTime: 600000, // 10 minutes
+    cacheTime: 900000, // 15 minutes (doesn't make sense for staleTime to exceed cacheTime)
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+  });
   return data;
 }
 
 export function usePrefetchTreatment(): void {
   const queryClient = useQueryClient();
-  queryClient.prefetchQuery([queryKeys.treatments], getTreatments);
+  queryClient.prefetchQuery([queryKeys.treatments], getTreatments, {
+    staleTime: 600000, // 10 minutes
+    cacheTime: 900000, // 15 minutes (doesn't make sense for staleTime to exceed cacheTime)
+  });
 }
