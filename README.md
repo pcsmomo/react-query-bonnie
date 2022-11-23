@@ -180,7 +180,7 @@ export interface DefaultOptions<TError = unknown> {
 
 ### 38. UPDATE: alternative way to specify global error handler
 
-[TKDODO's blog about react-query-error-handling](https://tkdodo.eu/blog/react-query-error-handling#the-global-callbacks)
+[TKDODO's blog about react-query-error-handling: https://tkdodo.eu/blog/react-query-error-handling#the-global-callbacks](https://tkdodo.eu/blog/react-query-error-handling#the-global-callbacks)
 
 > **Why is this way better?** \
 > Because the handler is tied to the query cache -- instead of the individual query -- the error handler is only triggered after all retries have failed. In the code presented in the course, the `toast.closeAll()` helps clean up any toasts triggered from previous retries. Using the `queryCache` option prevents toasts from retries, so `toast.closeAll()` (which is pretty inelegant) is not required.
@@ -214,6 +214,36 @@ export interface DefaultOptions<TError = unknown> {
 
 Filtering with the `select` option
 
-Reference: [Dominik's (tkdodo) Blog - Data Transformation](https://tkdodo.eu/blog/react-query-data-transformations)
+Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blog/react-query-data-transformations](https://tkdodo.eu/blog/react-query-data-transformations)
+
+### 52. Intro to Re-Fetch
+
+- Re-fetch ensures stale data gets updated from server
+  - Seen when we leave the page and refocus
+- Stale queries are re-fetched automatically in the background when:
+  - New instances of the query mount
+  - Every time a react component (that has a useQuery call) mounts
+  - The window is refocused
+  - The network is reconnected
+  - configured `refetchInterval` has expired
+    - Automatic polling
+
+#### Re-fetching! How?
+
+- Control with global or query-specific options:
+  - `refetchOnMount`, `refetchOnWindowFocus`, `refetchOnReconnect, refetchInterval`
+- Or, imperatively: `refetch` function in `useQuery` return object
+- reference: https://tanstack.com/query/v4/docs/guides/important-defaults
+
+# Suppressing Re-Fetch
+
+- How?
+  - Increase stale time
+  - turn off refetchOnMount / refetchOnWindowFocus / refetchOnReconnect
+- Only for very rarely changed, not mission-critical data
+
+  - treatments or staff (definitely not appointments!)
+
+- Ask: is it worth it?
 
 </details>
