@@ -21,6 +21,15 @@ export const queryClient = new QueryClient({
   queryCache: new QueryCache({
     onError: queryErrorHandler,
   }),
+  defaultOptions: {
+    queries: {
+      staleTime: 600000, // 10 minutes
+      cacheTime: 900000, // 15 minutes
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+    },
+  },
 });
 
 // import { createStandaloneToast } from '@chakra-ui/react';

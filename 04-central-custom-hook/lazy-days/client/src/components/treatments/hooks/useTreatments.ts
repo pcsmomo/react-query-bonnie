@@ -23,11 +23,11 @@ export function useTreatments(): Treatment[] {
     //       : 'error connecting to the server';
     //   toast({ title, status: 'error' });
     // },
-    staleTime: 600000, // 10 minutes
-    cacheTime: 900000, // 15 minutes (doesn't make sense for staleTime to exceed cacheTime)
-    refetchOnMount: false,
-    refetchOnWindowFocus: false,
-    refetchOnReconnect: false,
+    // staleTime: 600000, // 10 minutes
+    // cacheTime: 900000, // 15 minutes (doesn't make sense for staleTime to exceed cacheTime)
+    // refetchOnMount: false,
+    // refetchOnWindowFocus: false,
+    // refetchOnReconnect: false,
   });
   return data;
 }
