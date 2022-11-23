@@ -208,4 +208,12 @@ export interface DefaultOptions<TError = unknown> {
   - `keepPreviousData` only useful if background doesn't change
 - Treat keys as dependency arrays
 
+## Section 06. Query Features II: Transforming and Re-Fetching Data
+
+### 50. Filtering Data with the useQuery select Option
+
+Filtering with the `select` option
+
+Reference: [Dominik's (tkdodo) Blog - Data Transformation](https://tkdodo.eu/blog/react-query-data-transformations)
+
 </details>
