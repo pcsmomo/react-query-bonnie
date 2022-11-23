@@ -199,4 +199,13 @@ export interface DefaultOptions<TError = unknown> {
 | placeholderData | method to `useQuery`    | client     | no              |
 | initialData     | method to `useQuery`    | client     | yes             |
 
+### 49. Summary: Query Features I
+
+- Pre-populating data option: refer to the table above
+- Pre-fetch to pre-populate cache
+  - on component render
+  - on page(month/year) update
+  - `keepPreviousData` only useful if background doesn't change
+- Treat keys as dependency arrays
+
 </details>
