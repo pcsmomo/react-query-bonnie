@@ -235,7 +235,7 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
 - Or, imperatively: `refetch` function in `useQuery` return object
 - reference: https://tanstack.com/query/v4/docs/guides/important-defaults
 
-# Suppressing Re-Fetch
+#### Suppressing Re-Fetch
 
 - How?
   - Increase stale time
@@ -245,5 +245,22 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
   - treatments or staff (definitely not appointments!)
 
 - Ask: is it worth it?
+
+### 56. Polling: Auto Re-Fetching at an Interval
+
+- `refetchInterval` option to `useQuery`
+  - Reference: https://tanstack.com/query/v4/docs/examples/react/auto-refetching
+- what about `userAppointments`?
+  - can this go with the defaults?
+  - Yes, becuase it will never be updated "from underneath us"
+
+#### differences
+
+- `useAppointments`
+  - all users
+  - only for display month
+- `useUserAppointments`
+  - only logged-in user
+  - all time
 
 </details>
