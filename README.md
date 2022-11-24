@@ -321,4 +321,16 @@ Reference: https://tanstack.com/query/v4/docs/guides/dependent-queries
 > There are many `useUser` is used so there are 6 observers in a page \
 > but react-query is smart enough to deduplicate http requests!
 
+## Section 08. Mutations: Using React Query to Update Data on the Server
+
+### 66. Introduction to Mutations and Mutations Global Settings
+
+#### Global fetching / Error
+
+- Very similar to queries
+- Errors
+- Loading indicator
+  - `useIsMutating` is analogous to `useIsFetching`
+  - Update `Loading` component to show on `isMutating`
+
 </details>
