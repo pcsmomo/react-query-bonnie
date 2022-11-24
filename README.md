@@ -263,4 +263,31 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
   - only logged-in user
   - all time
 
+## Section 07. React Query and Authentication
+
+### 58. Intro to React Query and Authentication
+
+- Who should "own" the user data, `useAuth` or `useQuery`?
+  - Should `useAuth` call `useQuery`, or make the axios calls directly?
+  - Should `useAuth` have a provider that stores data, or store user data in React Query cache?
+
+#### Separation of Concerns
+
+- React Query: provide cache for **server state** on the client
+- `useAuth`: provides functions for signin/signup/signout
+- Conclusion: React Query will store data (via `useUser`)
+- `useAuth` collects user data from calls to server (add to cache)
+
+#### Role of `useUser`
+
+- Returns `user` data from React Query
+  - Load from `localStorage` on initialization
+- keep user data up to date with server via `useQuery`
+  - query function returns `null` if no user logged in
+  - update React Query cache via `setQueryData`
+  - update `localStorage` in `onSuccess` callback
+  - `onSuccess` runs after:
+    - `setQueryData`
+    - query function
+
 </details>
