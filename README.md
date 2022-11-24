@@ -297,4 +297,14 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
 - Add to `updateUser` and `clearUser`
   - `useAuth`already calls these functions
 
+### 61. Persist User Data in localStorage
+
+- Returns `user` data from React Query
+  - Load from `localStorage` on initialization
+- keep user data up to date with server via `useQuery`
+  - update `localStorage` in `onSuccess` callback
+  - `onSuccess` runs after:
+    - `setQueryData`
+    - query function
+
 </details>
