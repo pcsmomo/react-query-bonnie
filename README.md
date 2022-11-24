@@ -290,4 +290,11 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
     - `setQueryData`
     - query function
 
+### 60. Integrate Auth with React Query
+
+- React Query acting as a provider for auth
+- Use `queryClient.setQueryData`
+- Add to `updateUser` and `clearUser`
+  - `useAuth`already calls these functions
+
 </details>
