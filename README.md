@@ -287,7 +287,7 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
   - update React Query cache via `setQueryData`
   - update `localStorage` in `onSuccess` callback
   - `onSuccess` runs after:
-    - `setQueryData`
+    - `setQueryData` [from v4, it's not!](https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4#onsuccess-is-no-longer-called-from-setquerydata)
     - query function
 
 ### 60. Integrate Auth with React Query
@@ -304,7 +304,14 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
 - keep user data up to date with server via `useQuery`
   - update `localStorage` in `onSuccess` callback
   - `onSuccess` runs after:
-    - `setQueryData`
+    - `setQueryData` [from v4, it's not!](https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4#onsuccess-is-no-longer-called-from-setquerydata)
     - query function
+
+### 62. initialData from localStorage for useQuery
+
+- Use `initialData` value to `useQuery`
+  - For use when you want to initial value to be added to the cache
+  - For placeholder, use `placeholderData` or default destructured value
+- Reference: https://tanstack.com/query/v4/docs/guides/initial-query-data
 
 </details>

@@ -30,6 +30,7 @@ interface UseUser {
 export function useUser(): UseUser {
   const queryClient = useQueryClient();
   const { data: user } = useQuery([queryKeys.user], () => getUser(user), {
+    initialData: getStoredUser,
     onSuccess: (received: User | null) => {
       if (!received) {
         clearStoredUser();
@@ -42,11 +43,21 @@ export function useUser(): UseUser {
   // meant to be called from useAuth
   function updateUser(newUser: User): void {
     queryClient.setQueryData([queryKeys.user], newUser);
+
+    // With React Query v4, onSuccess is called only for a successful query function,
+    //     not for queryClient.setQueryData. Reference:
+    //     https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4#onsuccess-is-no-longer-called-from-setquerydata
+    setStoredUser(newUser);
   }
 
   // meant to be called from useAuth
   function clearUser() {
     queryClient.setQueryData([queryKeys.user], null);
+
+    // With React Query v4, onSuccess is called only for a successful query function,
+    //     not for queryClient.setQueryData. Reference:
+    //     https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4#onsuccess-is-no-longer-called-from-setquerydata
+    clearStoredUser();
   }
 
   return { user, updateUser, clearUser };
