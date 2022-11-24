@@ -58,6 +58,9 @@ export function useUser(): UseUser {
     //     not for queryClient.setQueryData. Reference:
     //     https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4#onsuccess-is-no-longer-called-from-setquerydata
     clearStoredUser();
+
+    // remove user appointments query
+    queryClient.removeQueries(['user-appointments']);
   }
 
   return { user, updateUser, clearUser };
