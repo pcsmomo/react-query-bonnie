@@ -314,4 +314,11 @@ Reference: [Dominik's (tkdodo) Blog - Data Transformation: https://tkdodo.eu/blo
   - For placeholder, use `placeholderData` or default destructured value
 - Reference: https://tanstack.com/query/v4/docs/guides/initial-query-data
 
+### 63. Dependent Queries: userAppointments
+
+Reference: https://tanstack.com/query/v4/docs/guides/dependent-queries
+
+> There are many `useUser` is used so there are 6 observers in a page \
+> but react-query is smart enough to deduplicate http requests!
+
 </details>
