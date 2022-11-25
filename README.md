@@ -344,4 +344,14 @@ reference:
 
 - https://tanstack.com/query/v4/docs/guides/query-invalidation
 
+### 70. Query Key Prefixes
+
+- `invalidateQueries` takes a query key prefix
+  - invalidate all realted queries at once
+  - can make it exact with `{ exact: true }` option
+  - other queryClient methods take prefix too (like `removeQueries`)
+- references
+  - https://tanstack.com/query/v4/docs/guides/query-keys
+  - https://tanstack.com/query/v4/docs/guides/query-invalidation#query-matching-with-invalidatequeries
+
 </details>
