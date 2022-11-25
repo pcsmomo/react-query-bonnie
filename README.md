@@ -340,4 +340,8 @@ reference:
 - https://tanstack.com/query/v4/docs/guides/mutations
 - https://tanstack.com/query/v4/docs/reference/useMutation
 
+### 69. Invalidating Query after Mutation
+
+- https://tanstack.com/query/v4/docs/guides/query-invalidation
+
 </details>
