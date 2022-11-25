@@ -333,4 +333,11 @@ Reference: https://tanstack.com/query/v4/docs/guides/dependent-queries
   - `useIsMutating` is analogous to `useIsFetching`
   - Update `Loading` component to show on `isMutating`
 
+### 67. Custom Mutation Hook: useReserveAppointments
+
+reference:
+
+- https://tanstack.com/query/v4/docs/guides/mutations
+- https://tanstack.com/query/v4/docs/reference/useMutation
+
 </details>
