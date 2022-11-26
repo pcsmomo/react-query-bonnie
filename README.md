@@ -414,4 +414,31 @@ Manually Cancelling Query
   - Logging only has an effect in development mode, where passing a custom logger is not necessary.
 - [v3 - setLogger](https://react-query-v3.tanstack.com/reference/setLogger)
 
+### 84. Testing Mutations
+
+- Mutations are harder
+  - MSW doesn't mimic a dynamic server (can't change responses based on state)
+  - To test results of mutation, need to have a test server, not just MSW
+  - Outside the scope of this course
+- Instead, check for toast on success
+- Close toast at the end of the test
+  - Keep toast state clean (so it doens't bleed into other tests), and
+  - Make sure toast disappearance doesn't happen after test finishes and make jest angry
+  - `waitForElementToBeRemoved` from `'@testing-library/react'`
+
+#### MemoryRouter
+
+- `Calendar` component includes React Router `Link`
+- `Link` can't be used outside of Router provider
+- `MemoryRouter` is generally used for tests
+- A `<Router>` that keeps the history of your “URL” in memory (does not read or write to the address bar). Useful in **tests** and non-browser environments like **React Native**.
+- references
+  - [MemoryRouter - React Router v6](https://reactrouter.com/en/main/router-components/memory-router)
+  - [MemoryRouter - React Router v5](https://v5.reactrouter.com/web/api/MemoryRouter)
+
+#### Mocking User Login
+
+- Need logged in user to be able to reserver appointment!
+- Mimic this by mocking return value from `useUser`
+
 </details>
