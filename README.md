@@ -384,4 +384,12 @@ Manually Cancelling Query
 - useQuery(queryKeys.user) -> AbortController -> getUser -> axis
 - queryClient.cancelQuery(queryKeys.user) -> AbortController
 
+## Section 09. Testing React Query
+
+### 77. Intro to Testing React Query
+
+- Material in this section is adapted from fantastic blog post
+  - https://tkdodo.eu/blog/testing-react-query
+- references: https://tanstack.com/query/v4/docs/guides/testing
+
 </details>
