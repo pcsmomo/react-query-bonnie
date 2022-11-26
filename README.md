@@ -392,4 +392,13 @@ Manually Cancelling Query
   - https://tkdodo.eu/blog/testing-react-query
 - references: https://tanstack.com/query/v4/docs/guides/testing
 
+### 78. Testing Setup, including Mock Service Worker
+
+- `npm install msw`
+- if not create-react-app, `npm install @testing-library/react`
+- MSW setup is already in src/mocks and src/setupTests.js
+  - All boilerplate from docs
+  - https://mswjs.io/docs/getting-started
+  - https://mswjs.io/docs/getting-started/integrate/node#using-create-react-app
+
 </details>
