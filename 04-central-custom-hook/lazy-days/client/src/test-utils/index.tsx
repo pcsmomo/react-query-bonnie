@@ -5,15 +5,15 @@ import { ReactElement } from 'react';
 // import { defaultQueryClientOptions } from '../react-query/queryClient';
 
 // make a function to generate a unique query client for each test
-const geenrateQueryClient = () => {
+const generateQueryClient = () => {
   return new QueryClient();
 };
 
-export function renderWithQueryClient(
+export function renderWithClient(
   ui: ReactElement,
   client?: QueryClient,
 ): RenderResult {
-  const queryClient = client ?? geenrateQueryClient();
+  const queryClient = client ?? generateQueryClient();
 
   return render(
     <QueryClientProvider client={queryClient}>{ui}</QueryClientProvider>,
