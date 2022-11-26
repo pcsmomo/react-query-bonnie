@@ -358,4 +358,11 @@ reference:
 
 reference: https://tanstack.com/query/v4/docs/guides/updates-from-mutation-responses
 
+### 73. Intro to Optimistic Updates in React Query
+
+- Optimistic updates
+  - reference: https://tanstack.com/query/v4/docs/guides/optimistic-updates
+- Makeing query "Cancel-able"
+  - reference: https://tanstack.com/query/v4/docs/guides/query-cancellation
+
 </details>
