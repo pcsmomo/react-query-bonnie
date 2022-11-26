@@ -401,4 +401,10 @@ Manually Cancelling Query
   - https://mswjs.io/docs/getting-started
   - https://mswjs.io/docs/getting-started/integrate/node#using-create-react-app
 
+### 79. Query Client and Provider in Tests
+
+- reference: https://tkdodo.eu/blog/testing-react-query#for-custom-hooks
+- Wrap for every test? Make a custom testing library render function
+  - https://testing-library.com/docs/react-testing-library/setup/#custom-render
+
 </details>
