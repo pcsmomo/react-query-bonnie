@@ -354,4 +354,8 @@ reference:
   - https://tanstack.com/query/v4/docs/guides/query-keys
   - https://tanstack.com/query/v4/docs/guides/query-invalidation#query-matching-with-invalidatequeries
 
+### 72. Update User and Query Cache with Mutation Response
+
+reference: https://tanstack.com/query/v4/docs/guides/updates-from-mutation-responses
+
 </details>
