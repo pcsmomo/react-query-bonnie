@@ -365,4 +365,23 @@ reference: https://tanstack.com/query/v4/docs/guides/updates-from-mutation-respo
 - Makeing query "Cancel-able"
   - reference: https://tanstack.com/query/v4/docs/guides/query-cancellation
 
+### 74. Making a Query "Cancel-able"
+
+Manually Cancelling Query
+
+- React Query uses `AbortController` to cancel queries
+  - standard JavaScript interface, send `AbortSignal` to DOM request
+  - https://developer.mozilla.org/en-US/docs/Web/API/AbortController
+- Automatically canceled queries use this signal "behind the scenes"
+  - out-of-date or inactive queries
+- Manually canceled axios query
+  - pass `signal` to axis via argument to query function
+  - https://axios-http.com/docs/cancellation
+- reference: https://tanstack.com/query/v4/docs/guides/query-cancellation
+
+#### Abirting via signal
+
+- useQuery(queryKeys.user) -> AbortController -> getUser -> axis
+- queryClient.cancelQuery(queryKeys.user) -> AbortController
+
 </details>
