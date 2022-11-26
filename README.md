@@ -407,4 +407,11 @@ Manually Cancelling Query
 - Wrap for every test? Make a custom testing library render function
   - https://testing-library.com/docs/react-testing-library/setup/#custom-render
 
+### 82. Testing Query Errors
+
+- [v4 - Custom logger](https://tanstack.com/query/v4/docs/guides/custom-logger)
+  - But it has been deprecated and will be removed in the next major version.
+  - Logging only has an effect in development mode, where passing a custom logger is not necessary.
+- [v3 - setLogger](https://react-query-v3.tanstack.com/reference/setLogger)
+
 </details>
