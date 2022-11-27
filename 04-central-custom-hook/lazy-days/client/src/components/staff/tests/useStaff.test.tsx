@@ -1,5 +1,24 @@
+import { act, renderHook } from '@testing-library/react-hooks';
+
+import { createQueryClientWrapper } from '../../../test-utils';
 import { useStaff } from '../hooks/useStaff';
 
 test('filter staff', async () => {
-  // the magic happens here
+  const { result, waitFor } = renderHook(useStaff, {
+    wrapper: createQueryClientWrapper(),
+  });
+
+  // wait for the staff to populate
+  await waitFor(() => result.current.staff.length === 4);
+
+  // set to filter for only staff who give massage
+  act(() => result.current.setFilter('massage'));
+
+  // wait for the staff list to display only 3
+  // await waitFor(() => result.current.staff.length === 3);
+  let filteredLength = 0;
+  await waitFor(() => {
+    filteredLength = result.current.staff.length;
+  });
+  expect(filteredLength).toBe(3);
 });
