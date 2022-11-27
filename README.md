@@ -441,4 +441,19 @@ Manually Cancelling Query
 - Need logged in user to be able to reserver appointment!
 - Mimic this by mocking return value from `useUser`
 
+### 86. Intro to Testing Custom Hooks
+
+```sh
+npm install @testing-library/react-hooks
+```
+
+[GitHub @testing-library/react-hook](https://github.com/testing-library/react-hooks-testing-library)
+
+#### When not to use this library
+
+- Your hook is defined alongside a component and is only used there
+- Your hook is easy to test by just testing the components using it
+
+reference - [Dominik's Blog - For custom hook](https://tkdodo.eu/blog/testing-react-query#for-custom-hooks)
+
 </details>
